@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Services
+namespace Repository
 {
     public class Class1
     {
