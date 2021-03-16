@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Repository
+namespace RazorApp.Repository
 {
     public class Class1
     {
