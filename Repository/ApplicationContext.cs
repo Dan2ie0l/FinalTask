@@ -14,9 +14,7 @@ namespace RazorApp.Repository
         public DbSet<Provider> Providers { get; set; }
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
             : base(options)
-        {
-
-        }
+        {}
 
     }
 }
