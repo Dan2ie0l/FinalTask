@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using RazorApp.Repository.Models;
 
-namespace Presentation.Models
+namespace RazorApp.Repository
 {
     public class ApplicationContext : DbContext
     {
