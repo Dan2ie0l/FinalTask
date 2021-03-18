@@ -14,15 +14,15 @@ namespace Presentation
         public ViewModelMapping()
         {
             CreateMap<Group, ViewModelGroup >()
-                .ForMember(m => m.Id, cfg => cfg.MapFrom(vm => vm.Id))
-                .ForMember(m => m.Name, cfg => cfg.MapFrom(vm => vm.Name))
-                .ForMember(m => m.Type, cfg => cfg.MapFrom(vm => vm.Type));
+                .ForMember(m => m.Id, conf => conf.MapFrom(viewM => viewM.Id))
+                .ForMember(m => m.Name, conf => conf.MapFrom(viewM => viewM.Name))
+                .ForMember(m => m.Type, conf => conf.MapFrom(viewM => viewM.Type));
 
             CreateMap<Provider, ViewModelProvider >()
-                .ForMember(m => m.Id, cfg => cfg.MapFrom(vm => vm.Id))
-                .ForMember(m => m.Name, cfg => cfg.MapFrom(vm => vm.Name))
-                .ForMember(m => m.Type, cfg => cfg.MapFrom(vm => vm.Type))
-                .ForMember(m => m.GroupId, cfg => cfg.MapFrom(vm => vm.GroupId));
+                .ForMember(m => m.Id, conf => conf.MapFrom(viewM => viewM.Id))
+                .ForMember(m => m.Name, conf => conf.MapFrom(viewM => viewM.Name))
+                .ForMember(m => m.Type, conf => conf.MapFrom(viewM => viewM.Type))
+                .ForMember(m => m.GroupId, conf => conf.MapFrom(viewM => viewM.GroupId));
         }
     }
 }
