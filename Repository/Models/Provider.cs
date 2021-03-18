@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace RazorApp.Repository.Models
 {
-    public class Provider
+    public class Provider:Abstract
     {
         public string Type { get; set; }
         public string Name { get; set; }

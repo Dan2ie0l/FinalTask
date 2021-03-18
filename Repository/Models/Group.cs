@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace RazorApp.Repository.Models
 {
-    public class Group
+    public class Group:Abstract
     {
         
         public string Type { get; set; }
