@@ -10,31 +10,31 @@ namespace RazorApp.Services.Services
         where T : Abstract
     {
        
-            private readonly IBaseRepository<T> repository;
+            private  IBaseRepository<T> repo;
 
             public BaseService(IBaseRepository<T> repository)
             {
-                this.repository = repository;
+                this.repo = repository;
             }
 
             public IEnumerable<T> Actives()
             {
-                return repository.Actives();
+                return repo.Actives();
             }
 
             public IEnumerable<T> All()
             {
-                return repository.All();
+                return repo.All();
             }
 
             public IEnumerable<T> Deleted()
             {
-                return repository.Deleted();
+                return repo.Deleted();
             }
 
             public T GetById(int id)
             {
-                return repository.GetById(id);
+                return repo.GetById(id);
             }
 
             public void Add(T model)
@@ -42,17 +42,17 @@ namespace RazorApp.Services.Services
                 model.Active = true;
                 model.ModifiedOn = DateTime.Now;
                 model.CreatedOn = DateTime.Now;
-                repository.Add(model);
+                repo.Add(model);
             }
 
             public bool Delete(int id)
             {
-                return repository.Delete(id);
+                return repo.Delete(id);
             }
 
             public void Update(T model)
             {
-                repository.Update(model);
+                repo.Update(model);
             }
         }
     }

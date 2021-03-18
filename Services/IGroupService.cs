@@ -7,5 +7,7 @@ namespace RazorApp.Services
 {
     public interface IGroupService : IBaseService<Group>
     {
+        IEnumerable<string> GroupsNames();
+
     }
 }

@@ -7,7 +7,7 @@ namespace RazorApp.Services
 {
     public interface IProviderService : IBaseService<Provider>
     {
-
+        IEnumerable<string> ProvidersNames(int groupId);
     }
 }
 
