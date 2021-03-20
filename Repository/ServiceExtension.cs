@@ -2,17 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
+using RazorApp.Repository;
 using RazorApp.Repository.Repo;
 
-namespace RazorApp.Repository
+namespace Microsoft.Extensions.DependencyInjection
 {
     public static class ServiceCollectionExtensions
     {
         public static IServiceCollection AddDbContext(this IServiceCollection services, string connectionString)
-        {
-            return services.AddDbContext<ApplicationContext>(con => con.UseSqlServer(connectionString));
-        }
+            => services.AddDbContext<ApplicationContext>(con => con.UseSqlServer(connectionString));
 
         public static IServiceCollection AddRepositoryContracts(this IServiceCollection services)
             => services

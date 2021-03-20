@@ -1,9 +1,10 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using RazorApp.Repository;
+using RazorApp.Services;
 using RazorApp.Services.Services;
 using System;
 
-namespace RazorApp.Services
+namespace Microsoft.Extensions.DependencyInjection
 {
     public static class ServiceExtensions
     {

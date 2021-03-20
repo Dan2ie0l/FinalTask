@@ -10,6 +10,6 @@ namespace RazorApp.Repository.Models
         public string Type { get; set; }
         public string Name { get; set; }
         public int GroupId { get; set; }
-        public Group groups { get; set; }
+        public Group Group { get; set; }
     }
 }
